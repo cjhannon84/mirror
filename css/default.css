@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    margin:10px !important;
+    height:100%;
+    overflow-y:hidden;
+}
+
+html, .container-fluid{
+    height:100%;
+}
+
+.fill-height{
+    height:80%;
+}
+
+#dark {
+    background-color:#000000;
+    color:#fff;
+}
+
+
+.appointments {
+
+}
+.appointments .title {
+    display:inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.appointments .details {
+    font-size:13px;
+}
