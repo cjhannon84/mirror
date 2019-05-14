@@ -1,0 +1,81 @@
+@{
+    Layout="~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script src="js/mirror.js"></script>
+
+    <script id="time-template" type="text/x-handlebars-template">
+
+            <h1><i class="fal fa-alarm-clock col-1 text-center"></i><span class="col-11">{{time}}</span></h1>
+            <h6><span class="col-11">{{datestring}}</span></h6>    
+
+    </script>
+}
+<div class="container-fluid no-gutters">
+    <div class="row fill-height">
+        <div class="col-6">
+            
+        </div>
+        <div class="col-6 appointments">
+            <div class="row no-gutters">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-1"><i class="fal fa-calendar-alt text-center"></i></div>
+                        <div class="col-10 title">Appointment Title</div>
+                    </div>
+                    <span class="details"><i class="fal fa-alarm-clock"></i> 18:00 <i class="fal fa-map-marker-alt"></i> Home</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-1"><i class="fal fa-calendar-alt text-center"></i></div>
+                        <div class="col-10 title">Appointment Title</div>
+                    </div>
+                    <span class="details"><i class="fal fa-alarm-clock"></i> 18:00 <i class="fal fa-map-marker-alt"></i> Home</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-1"><i class="fal fa-calendar-alt text-center"></i></div>
+                        <div class="col-10 title">Appointment Title</div>
+                    </div>
+                    <span class="details"><i class="fal fa-alarm-clock"></i> 18:00 <i class="fal fa-map-marker-alt"></i> Home</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-1"><i class="fal fa-calendar-alt text-center"></i></div>
+                        <div class="col-10 title">Appointment Title</div>
+                    </div>
+                    <span class="details"><i class="fal fa-alarm-clock"></i> 18:00 <i class="fal fa-map-marker-alt"></i> Home</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-1"><i class="fal fa-calendar-alt text-center"></i></div>
+                        <div class="col-10 title">Appointment Title</div>
+                    </div>
+                    <span class="details"><i class="fal fa-alarm-clock"></i> 18:00 <i class="fal fa-map-marker-alt"></i> Home</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-1"><i class="fal fa-calendar-alt text-center"></i></div>
+                        <div class="col-10 title">Appointment Title</div>
+                    </div>
+                    <span class="details"><i class="fal fa-alarm-clock"></i> 18:00 <i class="fal fa-map-marker-alt"></i> Home</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--bottom footer area-->
+    <div class="row no-gutters">
+        <div class="col-8">
+            <div class="text-center">
+                <h3><i class="fal fa-comment-alt-lines"></i><br />    
+                Messages get printed here</h3>
+                    
+            </div>
+        </div>
+        <div class="col-4 text-right">
+            <div id="time-display">
+                
+            </div>
+        </div>
+    </div>
+</div>
