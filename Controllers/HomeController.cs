@@ -15,7 +15,9 @@ namespace magicmirror.Controllers{
 
         public IActionResult GetWeather() 
         {
+            var httpClient = _httpClientFactory.CreateClient();
 
+            var response = httpClient.GetAsync("");
         }
     }
 }
