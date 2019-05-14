@@ -4,7 +4,7 @@ var minify = require("gulp-minify");
 
 gulp.task("scripts", function() {
     return gulp.src([
-                './bower_components/jquery/dist/jquery.slim.min.js',
+                './bower_components/jquery/dist/jquery.min.js',
                 './bower_components/bootstrap/dist/js/bootstrap.min.js',
                 './bower_components/handlebars/handlebars.min.js',
                 './node_modules/moment/min/moment-with-locales.min.js',

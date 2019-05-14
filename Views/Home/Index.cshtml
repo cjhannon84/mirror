@@ -10,10 +10,15 @@
             <h6><span class="col-11">{{datestring}}</span></h6>    
 
     </script>
+
+    <script id="weather-template" type="text/x-handlebars-template">
+        <img src="{{icon}}" /><br />
+        <span>{{weather}}</span>
+    </script>
 }
 <div class="container-fluid no-gutters">
     <div class="row fill-height">
-        <div class="col-6">
+        <div class="col-6" id="weather">
             
         </div>
         <div class="col-6 appointments">
