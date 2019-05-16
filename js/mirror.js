@@ -1,6 +1,7 @@
 var mirror = {
     timer:0,
     timerFrequency:1000,
+    weatherFrequency:3600000,
     init:function() {
         timer = setInterval(function() {
             mirror.changeTime();
@@ -29,7 +30,7 @@ var mirror = {
                 var html = template();
                 var context = {
                     weather:data.weather[0].description,
-                    icon:"http://openweathermap.org/img/w/"+data.weather[0].icon+".png"
+                    icon:data.weather[0].iconclass
                 };
                 var html = template(context);
                 $("#weather").html(html);

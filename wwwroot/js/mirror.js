@@ -69,7 +69,7 @@ var mirror = {
                 var html = template();
                 var context = {
                     weather:data.weather[0].description,
-                    icon:"http://openweathermap.org/img/w/"+data.weather[0].icon+".png"
+                    icon:data.weather[0].iconclass
                 };
                 var html = template(context);
                 $("#weather").html(html);

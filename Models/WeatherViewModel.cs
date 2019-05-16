@@ -14,5 +14,37 @@ namespace magicmirror.Models
         public string main {get;set;}
         public string description {get;set;}
         public string icon {get;set;}
+
+        public string iconclass 
+        {
+            get
+            {
+                switch (icon)
+                {
+                    case "02d":
+                        return "far fa-sun";
+                    case "02n":
+                        return "far fa-moon";
+                    case "09d":
+                        return "far fa-clouds-sun";
+                    case "09n":
+                        return "far fa-clouds-moon";
+                    case "10n":
+                        return "far fa-raindrops";
+                    case "10d":
+                        return "far fa-raindrops";
+                    case "11d":
+                        return "far fa-thunderstorm-moon";
+                    case "11n":
+                        return "far fa-thunderstorm-moon";
+                    case "13d":
+                        return "far fa-snowflake";
+                    case "13n":
+                        return "far fa-snowflake";
+                    default:
+                        return "far fa-cloud";
+                }
+            }
+        }
     }
 }
