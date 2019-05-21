@@ -1,12 +1,26 @@
 var mirror = {
     timer:0,
     timerFrequency:1000,
-    weatherFrequency:3600000,
+    weatherFrequency: 3600000,
+    connection:null,
     init:function() {
         timer = setInterval(function() {
             mirror.changeTime();
         }, mirror.timerFrequency);
         mirror.displayWeather();
+
+        mirror.connection = new signalR.HubConnectionBuilder().withUrl("/messagingHub").build();
+
+        mirror.connection.on("ReceiveMessage", function (message) {
+            console.log("ReceiveMessage");
+        });
+
+        mirror.connection.start().then(function () {
+            console.log("Started");
+        }).catch(function (err) {
+            return console.error(err.toString());
+        });
+        
     },
     changeTime:function(){
         var source = $("#time-template").html();

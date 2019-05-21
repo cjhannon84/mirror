@@ -2,18 +2,22 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using magicmirror.Hubs;
 using magicmirror.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
 
 namespace magicmirror.Controllers{
     public class HomeController: Controller
     {
         private IHttpClientFactory _httpClientFactory;
+        private readonly IHubContext<MessagingHub> hubContext;
 
-        public HomeController(IHttpClientFactory httpClientFactory)
+        public HomeController(IHttpClientFactory httpClientFactory, IHubContext<MessagingHub> hubContext)
         {
             _httpClientFactory=httpClientFactory;
+            this.hubContext = hubContext;
         }
 
         public IActionResult Index () => View();
